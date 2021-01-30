@@ -31,5 +31,9 @@
     <color name="color_home_background">#F6F7F9</color>
     <color name="wallet_color">#2CB3A9A8</color>
 
+    <color name="lightBlue">#DCF6FF</color>
+    <color name="paystack_btnbg">#3bb75e</color>
+    <color name="paystack_bg">#FE8100</color>
+
 
 </resources>

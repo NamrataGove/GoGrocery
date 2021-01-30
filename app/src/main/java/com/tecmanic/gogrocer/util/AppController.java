@@ -7,10 +7,6 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.toolbox.Volley;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Locale;
-
 /**
  * Created by Rajesh Dabhi on 22/6/2017.
  */
@@ -18,23 +14,21 @@ import java.util.Locale;
 public class AppController extends Application {
 
     public static final String TAG = AppController.class.getSimpleName();
-
+    private static AppController mInstance;
     private RequestQueue mRequestQueue;
 
-    private static AppController mInstance;
+    private static void instacMethod(AppController appController) {
+        mInstance = appController;
+    }
+
+    public static synchronized AppController getInstance() {
+        return mInstance;
+    }
 
     @Override
     public void onCreate() {
         super.onCreate();
-        mInstance = this;
-        List<Locale> locales = new ArrayList<>();
-        locales.add(Locale.ENGLISH);
-        locales.add(new Locale("ar","ARABIC"));
-        LocaleHelper.setLocale(getApplicationContext(),"en");
-            }
-
-    public static synchronized AppController getInstance() {
-        return mInstance;
+        instacMethod(this);
     }
 
     public RequestQueue getRequestQueue() {
@@ -53,16 +47,6 @@ public class AppController extends Application {
     public <T> void addToRequestQueue(Request<T> req) {
         req.setTag(TAG);
         getRequestQueue().add(req);
-    }
-
-    public void cancelPendingRequests(Object tag) {
-        if (mRequestQueue != null) {
-            mRequestQueue.cancelAll(tag);
-        }
-    }
-
-    public void setConnectivityListener(ConnectivityReceiver.ConnectivityReceiverListener listener) {
-        ConnectivityReceiver.connectivityReceiverListener = listener;
     }
 
 }

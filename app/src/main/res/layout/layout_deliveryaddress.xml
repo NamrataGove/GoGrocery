@@ -58,7 +58,7 @@
                         android:layout_width="15dp"
                         android:layout_height="15dp"
                         android:id="@+id/edit_address"
-                        android:background="@drawable/ic_edit"></ImageView>
+                        android:background="@drawable/ic_edit"/>
                 </LinearLayout>
 
             </LinearLayout>
@@ -84,12 +84,9 @@
                 android:id="@+id/txt_address_myaddrss_history"
                 android:textColor="@color/darkGrey"
                 android:textSize="13sp"
-
                 android:paddingLeft="5dp"
                 android:paddingRight="5dp"
-
                 android:text="noida 63 hjdkkkskkkkdsjjsjsjdhdhsjsjskk" />
-
         </LinearLayout>
     </LinearLayout>
     </LinearLayout>
@@ -99,5 +96,5 @@
         android:layout_width="match_parent"
         android:layout_height="1dp"
         android:layout_marginTop="10dp"
-        android:background="@color/lightGrey"></View>
+        android:background="@color/lightGrey"/>
 </LinearLayout>

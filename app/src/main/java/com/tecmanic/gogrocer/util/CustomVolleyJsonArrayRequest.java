@@ -35,10 +35,11 @@ public class CustomVolleyJsonArrayRequest extends Request<JSONArray> {
         this.params = params;
     }
 
+    @Override
     protected Map<String, String> getParams()
             throws com.android.volley.AuthFailureError {
         return params;
-    };
+    }
 
     @Override
     protected Response<JSONArray> parseNetworkResponse(NetworkResponse response) {
@@ -56,7 +57,6 @@ public class CustomVolleyJsonArrayRequest extends Request<JSONArray> {
 
     @Override
     protected void deliverResponse(JSONArray response) {
-        // TODO Auto-generated method stub
         listener.onResponse(response);
     }
 }

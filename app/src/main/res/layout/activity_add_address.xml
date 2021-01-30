@@ -7,7 +7,7 @@
     android:layout_weight="3"
     android:orientation="vertical"
     android:background="@color/white"
-    tools:context=".Activity.AddAddress">
+    tools:context=".activity.AddAddress">
 
     <LinearLayout
         android:id="@+id/ll1"
@@ -184,6 +184,7 @@
 
 
                 <com.google.android.material.textfield.TextInputLayout
+                    android:clickable="false"
                         android:id="@+id/input_layout_CIty"
                         android:layout_width="150dp"
                         android:layout_marginRight="5dp"
@@ -194,6 +195,8 @@
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="City*"
+                            android:clickable="false"
+                            android:focusable="false"
                             android:textColorHint="@color/orange"
                             android:textColor="@color/black"
                             android:textSize="14sp"
@@ -208,15 +211,19 @@
                         android:orientation="vertical"
                         android:gravity="end|center">
                     <com.google.android.material.textfield.TextInputLayout
+                        android:clickable="false"
+                        android:focusable="false"
                         android:id="@+id/input_layout_state"
                         android:layout_width="150dp"
                         android:layout_height="wrap_content">
 
                         <EditText
-                            android:id="@+id/input_state1"
+                            android:id="@+id/input_state"
                             android:layout_width="match_parent"
                             android:layout_height="wrap_content"
                             android:hint="State*"
+                            android:clickable="false"
+                            android:focusable="false"
                             android:textColorHint="@color/orange"
                             android:textColor="@color/black"
                             android:textSize="14sp"
@@ -459,4 +466,23 @@
 
 
     </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/progress_bar"
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:clickable="false"
+        android:focusable="false"
+        android:focusableInTouchMode="false"
+        android:visibility="gone"
+        android:layout_centerInParent="true"
+        android:background="@color/black_fade"
+        android:layout_height="match_parent">
+        <androidx.core.widget.ContentLoadingProgressBar
+            style="@style/Widget.AppCompat.ProgressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+
 </RelativeLayout>

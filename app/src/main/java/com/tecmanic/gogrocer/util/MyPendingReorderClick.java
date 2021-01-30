@@ -1,6 +1,6 @@
 package com.tecmanic.gogrocer.util;
 
-import com.tecmanic.gogrocer.ModelClass.NewPendingDataModel;
+import com.tecmanic.gogrocer.modelclass.NewPendingDataModel;
 
 import java.util.ArrayList;
 

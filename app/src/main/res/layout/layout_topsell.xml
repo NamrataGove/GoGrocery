@@ -46,7 +46,7 @@
                     android:layout_gravity="center"
                     android:layout_marginLeft="10dp"
                     android:layout_marginRight="2dp"
-                    android:background="@drawable/splashicon"></ImageView>
+                    android:scaleType="centerCrop" />
             </LinearLayout>
             <LinearLayout
                 android:layout_width="match_parent"
@@ -143,7 +143,7 @@
                                 android:fontFamily="@font/opensans_semibold"
                                 android:gravity="center|left"
                                 android:paddingRight="2dp"
-                                android:text="@string/currency"
+
                                 android:textColor="@color/darkGrey"
                                 android:textSize="15sp"/>
 
@@ -166,7 +166,7 @@
                                 android:fontFamily="@font/opensans_regular"
                                 android:gravity="center|left"
                                 android:paddingRight="2dp"
-                                android:text="@string/currency"
+
                                 android:textColor="@color/hintColor"
                                 android:textSize="11sp"/>
 

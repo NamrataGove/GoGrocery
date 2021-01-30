@@ -21,7 +21,8 @@ public class GifImageView extends View {
 
     private InputStream mInputStream;
     private Movie mMovie;
-    private int mWidth, mHeight;
+    private int mWidth;
+    private int mHeight;
     private long mStart;
     private Context mContext;
 

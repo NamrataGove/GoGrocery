@@ -6,82 +6,80 @@ import android.content.SharedPreferences.Editor;
 
 public class SharedPreferenceUtil {
 
-    private SharedPreferences _prefs = null;
-    private Editor _editor = null;
+    private SharedPreferences prefs = null;
+    private Editor editor = null;
 
     public SharedPreferenceUtil(Context context) {
-        this._prefs = context.getSharedPreferences("GOGrocer",
-                Context.MODE_PRIVATE);
-        this._editor = this._prefs.edit();
+        this.prefs = context.getSharedPreferences("GOGrocer", Context.MODE_PRIVATE);
+        this.editor = this.prefs.edit();
 
     }
 
 
     public String getString(String key, String defaultvalue) {
-        if (this._prefs == null) {
+        if (this.prefs == null) {
             return defaultvalue;
         }
-        return this._prefs.getString(key, defaultvalue);
+        return this.prefs.getString(key, defaultvalue);
     }
 
     public void setString(String key, String value) {
-        if (this._editor == null) {
+        if (this.editor == null) {
             return;
         }
-        this._editor.putString(key, value);
-        _editor.apply();
+        this.editor.putString(key, value);
+        editor.apply();
     }
 
     public Boolean getBoolean(String key, Boolean defaultvalue) {
-        if (this._prefs == null) {
+        if (this.prefs == null) {
             return defaultvalue;
         }
-        return this._prefs.getBoolean(key, defaultvalue);
+        return this.prefs.getBoolean(key, defaultvalue);
     }
 
     public void setBoolean(String key, Boolean value) {
-        if (this._editor == null) {
+        if (this.editor == null) {
             return;
         }
-        this._editor.putBoolean(key, value);
-        _editor.apply();
+        this.editor.putBoolean(key, value);
+        editor.apply();
     }
 
     public int getInt(String key, int defaultvalue) {
-        if (this._prefs == null) {
+        if (this.prefs == null) {
             return defaultvalue;
         }
-        return this._prefs.getInt(key, defaultvalue);
+        return this.prefs.getInt(key, defaultvalue);
     }
 
     public void setInt(String key, int value) {
-        if (this._editor == null) {
+        if (this.editor == null) {
             return;
         }
-        this._editor.putInt(key, value);
-        _editor.apply();
+        this.editor.putInt(key, value);
+        editor.apply();
     }
     public void clearAll() {
-        if (this._editor == null) {
+        if (this.editor == null) {
             return;
         }
-        this._editor.clear().apply();
+        this.editor.clear().apply();
 
     }
 
     public void removeOneItem(String key) {
-        if (this._editor == null) {
+        if (this.editor == null) {
             return;
         }
-        this._editor.remove(key);
-//        _editor.apply();
+        this.editor.remove(key);
     }
 
     public void save() {
-        if (this._editor == null) {
+        if (this.editor == null) {
             return;
         }
-        this._editor.apply();
+        this.editor.apply();
     }
 
 
